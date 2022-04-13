@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>TestClass</Title>
+            <Author>Jango Hemmes</Author>
+            <Description>Boilerplate for a new testclass</Description>
+            <Shortcut>testclass</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[namespace $Namespace$.Tests
+{
+    [TestFixture]
+    [ExcludeFromCodeCoverage]
+    public class $SUT$Tests
+    {
+        $selected$$end$
+    }
+}]]>
+            </Code>
+            <Declarations>
+                <Literal>
+                    <ID>Namespace</ID>
+                    <ToolTip>The namespace of the SUT</ToolTip>
+                </Literal>
+                <Literal>
+                    <ID>SUT</ID>
+                    <ToolTip>The name of the System Under Test</ToolTip>
+                </Literal>
+            </Declarations>
+            <Imports>
+                <Import>
+                    <Namespace>NUnit.Framework</Namespace>
+                </Import>
+                <Import>
+                    <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
