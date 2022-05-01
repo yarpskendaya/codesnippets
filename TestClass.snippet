@@ -9,7 +9,12 @@
         </Header>
         <Snippet>
             <Code Language="CSharp">
-                <![CDATA[namespace $Namespace$.Tests
+                <![CDATA[using System;
+using System.Diagnostics.CodeAnalysis;
+using NSubstitute;
+using NUnit.Framework;
+
+namespace $Namespace$.Tests
 {
     [TestFixture]
     [ExcludeFromCodeCoverage]
@@ -29,14 +34,6 @@
                     <ToolTip>The name of the System Under Test</ToolTip>
                 </Literal>
             </Declarations>
-            <Imports>
-                <Import>
-                    <Namespace>NUnit.Framework</Namespace>
-                </Import>
-                <Import>
-                    <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
-                </Import>
-            </Imports>
         </Snippet>
     </CodeSnippet>
 </CodeSnippets>
