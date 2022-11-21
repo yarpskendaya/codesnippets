@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>NSubstitute Create Method</Title>
+            <Author>Jango Hemmes</Author>
+            <Description>Boilerplate for a create method that returns a mock </Description>
+            <Shortcut>createsub</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[private I$Interface$ Create$Interface$($end$)
+{
+    I$Interface$ $Name$ = Substitute.For<I$Interface$>();
+
+    return $Name$;
+}]]>
+            </Code>
+            <Declarations>
+                <Literal>
+                    <ID>Interface</ID>
+                    <Default>Interface</Default>
+                    <ToolTip>The name of the interface to mock (without the I)</ToolTip>
+                </Literal>
+                 <Literal>
+                    <ID>Name</ID>
+                    <Default>myInterface</Default>
+                    <ToolTip>The name of the instance </ToolTip>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
