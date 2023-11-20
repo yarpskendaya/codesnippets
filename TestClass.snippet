@@ -18,10 +18,14 @@ namespace $MainNamespace$.Tests.$SubNamespace$
 {
     [TestFixture]
     [ExcludeFromCodeCoverage]
+    [TestOf(typeof($SUT$))]
     public class $SUT$Tests
     {
-        $selected$
-        $end$
+        public class $Method$ : $SUT$Tests
+        {
+            $selected$
+            $end$
+        }
     }
 }]]>
             </Code>
@@ -29,14 +33,22 @@ namespace $MainNamespace$.Tests.$SubNamespace$
                 <Literal>
                     <ID>MainNamespace</ID>
                     <ToolTip>The main namespace of the SUT</ToolTip>
+                    <Default>Namespace</Default>
                 </Literal>
                 <Literal>
                     <ID>SubNamespace</ID>
                     <ToolTip>The main namespace of the SUT</ToolTip>
+                    <Default>Service</Default>
                 </Literal>
                 <Literal>
                     <ID>SUT</ID>
                     <ToolTip>The name of the System Under Test</ToolTip>
+                    <Default>SUT</Default>
+                </Literal>
+                <Literal>
+                    <ID>Method</ID>
+                    <ToolTip>The name of the method to test</ToolTip>
+                    <Default>Method</Default>
                 </Literal>
             </Declarations>
         </Snippet>
