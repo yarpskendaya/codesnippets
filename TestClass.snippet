@@ -21,10 +21,22 @@ namespace $MainNamespace$.Tests.$SubNamespace$
     [TestOf(typeof($SUT$))]
     public class $SUT$Tests
     {
+        private Scope _scope;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _scope = new Scope();
+        }
+
         public class $Method$ : $SUT$Tests
         {
             $selected$
             $end$
+        }
+
+        private sealed class Scope
+        {
         }
     }
 }]]>
