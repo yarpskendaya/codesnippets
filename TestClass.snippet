@@ -9,49 +9,32 @@
         </Header>
         <Snippet>
             <Code Language="CSharp">
-                <![CDATA[using System;
-using System.Diagnostics.CodeAnalysis;
-using NSubstitute;
-using NUnit.Framework;
+                <![CDATA[namespace Namespace$selected$$end$;
 
-namespace $MainNamespace$.Tests.$SubNamespace$
+[TestFixture]
+[ExcludeFromCodeCoverage]
+[TestOf(typeof($SUT$))]
+public class $SUT$Tests
 {
-    [TestFixture]
-    [ExcludeFromCodeCoverage]
-    [TestOf(typeof($SUT$))]
-    public class $SUT$Tests
+    private Scope _scope;
+
+    [SetUp]
+    public void SetUp()
     {
-        private Scope _scope;
-
-        [SetUp]
-        public void SetUp()
-        {
-            _scope = new Scope();
-        }
-
-        public class $Method$ : $SUT$Tests
-        {
-            $selected$
-            $end$
-        }
-
-        private sealed class Scope
-        {
-        }
+        _scope = new Scope();
     }
-}]]>
+
+    public class $Method$ : $SUT$Tests
+    {
+    }
+
+    private sealed class Scope
+    {
+    }
+}
+]]>
             </Code>
             <Declarations>
-                <Literal>
-                    <ID>MainNamespace</ID>
-                    <ToolTip>The main namespace of the SUT</ToolTip>
-                    <Default>Namespace</Default>
-                </Literal>
-                <Literal>
-                    <ID>SubNamespace</ID>
-                    <ToolTip>The main namespace of the SUT</ToolTip>
-                    <Default>Service</Default>
-                </Literal>
                 <Literal>
                     <ID>SUT</ID>
                     <ToolTip>The name of the System Under Test</ToolTip>
