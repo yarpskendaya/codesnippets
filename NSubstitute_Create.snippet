@@ -4,25 +4,23 @@
         <Header>
             <Title>NSubstitute Create Method</Title>
             <Author>Jango Hemmes</Author>
-            <Description>Boilerplate for a create method that returns a mock </Description>
+            <Description>Boilerplate for a create method that returns a stub </Description>
             <Shortcut>createsub</Shortcut>
         </Header>
         <Snippet>
-            <Code Language="CSharp">
-                <![CDATA[private I$Interface$ Create$Interface$($end$)
+            <Code Language="CSharp"><![CDATA[private I$Interface$ Create$Interface$($end$)
 {
     I$Interface$ $Name$ = Substitute.For<I$Interface$>();
 
     return $Name$;
-}]]>
-            </Code>
+}]]></Code>
             <Declarations>
                 <Literal>
                     <ID>Interface</ID>
                     <Default>Interface</Default>
-                    <ToolTip>The name of the interface to mock (without the I)</ToolTip>
+                    <ToolTip>The name of the interface to stub out (without the I)</ToolTip>
                 </Literal>
-                 <Literal>
+                <Literal>
                     <ID>Name</ID>
                     <Default>myInterface</Default>
                     <ToolTip>The name of the instance </ToolTip>

@@ -1,2 +1,2 @@
 # codesnippets
-Code Snippets to remind myself of in any language
+Collection of custom code snippets to use in an IDE
