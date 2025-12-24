@@ -12,7 +12,6 @@
                 <![CDATA[namespace Namespace$selected$$end$;
 
 [TestFixture]
-[ExcludeFromCodeCoverage]
 [TestOf(typeof($SUT$))]
 public class $SUT$Tests
 {
@@ -26,10 +25,19 @@ public class $SUT$Tests
 
     public class $Method$ : $SUT$Tests
     {
+        [Test]
+        public void Should_be_true()
+        {
+            _scope.Then().$Method$().Should().BeTrue();
+        }
     }
 
     private sealed class Scope
     {
+        public $SUT$ Then()
+        {
+            return new $SUT$();
+        }
     }
 }
 ]]>
